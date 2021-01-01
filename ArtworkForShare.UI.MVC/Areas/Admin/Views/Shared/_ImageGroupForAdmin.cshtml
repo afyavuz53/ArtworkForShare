@@ -1,0 +1,156 @@
+﻿@model ImageVM
+<div class="row templatemorow myHeight">
+    <div class="hex col-sm-6">
+        <div>
+            <div class="hexagon hexagon2 gallery-item">
+                <div class="hexagon-in1">
+                    <div class="hexagon-in2" style="        background-image: url(../../../Content/Images/@Model.Urls[0]);">
+                        <div class="overlay">
+                            <div id="myLink">
+                                <a href="../../../Content/Images/@Model.Urls[0]" data-rel="lightbox" class="myLink fa fa-expand"></a>        
+                                <a asp-area="admin" asp-controller="management" asp-action="ArtistArtworks" asp-route-id="@Model.UserId[0]" class="userGaleryBtn fa fa-user"></a>
+                                <a href="#" class="userGaleryBtn fa fa-exclamation-circle" onclick="Banned(@Model.ArtworkIds[0])"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hex col-sm-6">
+        <div>
+            <div class="hexagon hexagon2 gallery-item">
+                <div class="hexagon-in1">
+                    <div class="hexagon-in2" style="        background-image: url(../../../Content/Images/@Model.Urls[1]);">
+                        <div class="overlay">
+                            <div id="myLink">
+                                <a href="../../../Content/Images/@Model.Urls[1]" data-rel="lightbox" class="myLink fa fa-expand"></a>
+                                <a asp-area="admin" asp-controller="management" asp-action="ArtistArtworks" asp-route-id="@Model.UserId[1]" class="userGaleryBtn fa fa-user"></a>
+                                <a href="#" class="userGaleryBtn fa fa-exclamation-circle" onclick="Banned(@Model.ArtworkIds[1])"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hex col-sm-6  templatemo-hex-top2">
+        <div>
+            <div class="hexagon hexagon2 gallery-item">
+                <div class="hexagon-in1">
+                    <div class="hexagon-in2" style="        background-image: url(../../../Content/Images/@Model.Urls[2]);">
+                        <div class="overlay">
+                            <div id="myLink">
+                                <a href="../../../Content/Images/@Model.Urls[2]" data-rel="lightbox" class="myLink fa fa-expand"></a>
+                                <a asp-area="admin" asp-controller="management" asp-action="ArtistArtworks" asp-route-id="@Model.UserId[2]" class="userGaleryBtn fa fa-user"></a>
+                                <a href="#" class="userGaleryBtn fa fa-exclamation-circle" onclick="Banned(@Model.ArtworkIds[2])"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hex col-sm-6  templatemo-hex-top3">
+        <div>
+            <div class="hexagon hexagon2 gallery-item">
+                <div class="hexagon-in1">
+                    <div class="hexagon-in2" style="        background-image: url(../../../Content/Images/@Model.Urls[3]);">
+                        <div class="overlay">
+                            <div id="myLink">
+                                <a href="../../../Content/Images/@Model.Urls[3]" data-rel="lightbox" class="myLink fa fa-expand"></a>
+                                <a asp-area="admin" asp-controller="management" asp-action="ArtistArtworks" asp-route-id="@Model.UserId[3]" class="userGaleryBtn fa fa-user"></a>
+                                <a href="#" class="userGaleryBtn fa fa-exclamation-circle" onclick="Banned(@Model.ArtworkIds[3])"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hex col-sm-6  templatemo-hex-top3">
+        <div>
+            <div class="hexagon hexagon2 gallery-item">
+                <div class="hexagon-in1">
+                    <div class="hexagon-in2" style="        background-image: url(../../../Content/Images/@Model.Urls[4]);">
+                        <div class="overlay">
+                            <div id="myLink">
+                                <a href="../../../Content/Images/@Model.Urls[4]" data-rel="lightbox" class="myLink fa fa-expand"></a>
+                                <a asp-area="admin" asp-controller="management" asp-action="ArtistArtworks" asp-route-id="@Model.UserId[4]" class="userGaleryBtn fa fa-user"></a>
+                                <a href="#" class="userGaleryBtn fa fa-exclamation-circle" onclick="Banned(@Model.ArtworkIds[4])"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hex col-sm-6 hex-offset templatemo-hex-top1 templatemo-hex-top2">
+        <div>
+            <div class="hexagon hexagon2 gallery-item">
+                <div class="hexagon-in1">
+                    <div class="hexagon-in2" style="        background-image: url(../../../Content/Images/@Model.Urls[5]);">
+                        <div class="overlay">
+                            <div id="myLink">
+                                <a href="../../../Content/Images/@Model.Urls[5]" data-rel="lightbox" class="myLink fa fa-expand"></a>
+                                <a asp-area="admin" asp-controller="management" asp-action="ArtistArtworks" asp-route-id="@Model.UserId[5]" class="userGaleryBtn fa fa-user"></a>
+                                <a href="#" class="userGaleryBtn fa fa-exclamation-circle" onclick="Banned(@Model.ArtworkIds[5])"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hex col-sm-6 templatemo-hex-top1 templatemo-hex-top3">
+        <div>
+            <div class="hexagon hexagon2 gallery-item">
+                <div class="hexagon-in1">
+                    <div class="hexagon-in2" style="        background-image: url(../../../Content/Images/@Model.Urls[6]);">
+                        <div class="overlay">
+                            <div id="myLink">
+                                <a href="../../../Content/Images/@Model.Urls[6]" data-rel="lightbox" class="myLink fa fa-expand"></a>
+                                <a asp-area="admin" asp-controller="management" asp-action="ArtistArtworks" asp-route-id="@Model.UserId[6]" class="userGaleryBtn fa fa-user"></a>
+                                <a href="#" class="userGaleryBtn fa fa-exclamation-circle" onclick="Banned(@Model.ArtworkIds[6])"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hex col-sm-6 templatemo-hex-top1  templatemo-hex-top3">
+        <div>
+            <div class="hexagon hexagon2 gallery-item">
+                <div class="hexagon-in1">
+                    <div class="hexagon-in2" style="        background-image: url(../../../Content/Images/@Model.Urls[7]);">
+                        <div class="overlay">
+                            <div id="myLink">
+                                <a href="../../../Content/Images/@Model.Urls[7]" data-rel="lightbox" class="myLink fa fa-expand"></a>
+                                <a asp-area="admin" asp-controller="management" asp-action="ArtistArtworks" asp-route-id="@Model.UserId[7]" class="userGaleryBtn fa fa-user"></a>
+                                <a href="#" class="userGaleryBtn fa fa-exclamation-circle" onclick="Banned(@Model.ArtworkIds[7])"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hex col-sm-6 templatemo-hex-top1  templatemo-hex-top2">
+        <div>
+            <div class="hexagon hexagon2 gallery-item">
+                <div class="hexagon-in1">
+                    <div class="hexagon-in2" style="        background-image: url(../../../Content/Images/@Model.Urls[8]);">
+                        <div class="overlay">
+                            <div id="myLink">
+                                <a href="../../../Content/Images/@Model.Urls[8]" data-rel="lightbox" class="myLink fa fa-expand"></a>
+                                <a asp-area="admin" asp-controller="management" asp-action="ArtistArtworks" asp-route-id="@Model.UserId[8]" class="userGaleryBtn fa fa-user"></a>
+                                <a href="#" class="userGaleryBtn fa fa-exclamation-circle" onclick="Banned(@Model.ArtworkIds[8])"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+﻿@model LoginUser
+
+@if (!string.IsNullOrEmpty(Model.UserName))
+{
+    if (Model.UserName != "Admin")
+    {
+        <li>
+            <a id="btnLogin" asp-controller="User" asp-action="Profile">
+                <span class="fa fa-pencil"></span>
+                @Model.UserName
+            </a>
+        </li>
+    }
+    else
+    {
+        <li>
+            <a id="btnLogin" asp-area="admin" asp-controller="Management" asp-action="index">
+                <span class="fa fa-pencil"></span>
+                @Model.UserName
+            </a>
+        </li>
+    }
+}
+else
+{
+    <li>
+        <a id="btnLogin" asp-controller="Account" asp-action="Login">
+            <span class="fa fa-user"></span>
+            Giris Yap
+        </a>
+    </li>
+}

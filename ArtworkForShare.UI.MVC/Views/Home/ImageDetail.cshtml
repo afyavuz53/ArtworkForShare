@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewData["Title"] = "ImageDetail";
+}
+
+<div class="container" id="site">
+    <div id="imageDetail">
+    </div>
+</div>
+
+<div class="atomMain" id="yukleniyor">
+    <div class="atomBody">
+        <main class="loadingMain">
+            <div class="atom">
+                <div class="electron"></div>
+                <div class="electron-alpha"></div>
+                <div class="electron-omega"></div>
+            </div>
+        </main>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        var id =@ViewContext.RouteData.Values["id"]
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:59959/api/artwork/GetArtworkDetail?id="+id,
+                success: function (input) {                    
+                   $.ajax({
+                        type: "POST",
+                        url: "../GetDetail",
+                        data: JSON.stringify(input),
+                        contentType: "application/json; charset=utf-8",
+                        success: function (response) {
+                            $("#imageDetail").html(response)
+                            $("#yukleniyor").hide()
+                            GetLightBox()
+                        }
+                   })
+                }
+            })
+        })
+
+    </script>
+}
+

@@ -1,0 +1,19 @@
+﻿@model DesireDetailVM
+
+<div class="col-sm-4">
+    <h2>İstek resim</h2>
+    <img id="imgRequest" href="../../Content/ClaimImages/@Model.RequestImg" src="../../Content/ClaimImages/@Model.RequestImg" data-rel="lightbox" alt="Eser" style="max-width: 100%; height: auto;" />
+</div>
+<div class="col-sm-4" style="font-size:medium; text-align:left;margin-top: 5%;">
+    <p id="title"><label>Başlık: </label> @Model.Title</p>
+    <p id="description"><label>Açıklama: </label> @Model.Description</p>
+    <p id="bidPrice"><label>Teklif: </label> @Model.BidPrice ₺</p>
+    <input name="Image" id="imageFile" type="file" class="form-control" onchange="UpdateImg()" onclick="ClearAlert()" style="margin-bottom:5px;">
+    <button id="btnAccept" class="btn btn-success" onclick="BtnAccept()">Onayla</button>
+    <button id="btnCancel" class="btn btn-danger" style="float:right;" onclick="BtnCancel()">Reddet</button>
+    <div id="alert" style="margin-top:5px"></div>
+</div>
+<div class="col-sm-4">
+    <h2>Çizim</h2>
+    <img id="aImg" href="../../Content/Images/emptyTuval.jpg" src="../../Content/ClaimImages/notReady.png" data-rel="lightbox" alt="Eser" style="max-width: 100%; height: auto;" />
+</div>

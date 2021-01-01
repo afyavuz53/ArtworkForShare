@@ -1,0 +1,21 @@
+﻿@model ArtworkDetailVM
+
+<div class="container">
+    <div class="row login-content ">
+        <div class="col-sm-6">
+            <img href="../../Content/Images/@Model.Url" src="../../Content/Images/@Model.Url" data-rel="lightbox" alt="Eser" style="max-width: 100%; height: auto;" />
+        </div>
+        <div class="col-sm-6" style="font-size:medium">
+            <p><b>Eser Adı:</b> @Model.Name</p>
+            <p><b>Sanatçı:</b><a asp-controller="Home" asp-action="ArtistArtworks" asp-route-id="@Model.UserId"> @Model.UserName</a></p>
+            @if (string.IsNullOrWhiteSpace(Model.Description))
+            {
+                <p><b>Açıklama yok</b></p>
+            }
+            else
+            {
+                <p><b>Açıklama: @Model.Description</b></p>
+            }
+        </div>
+    </div>
+</div>

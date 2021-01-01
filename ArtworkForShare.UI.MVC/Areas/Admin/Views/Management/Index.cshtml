@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 myTable">
+            <h2>Hoşgeldin Admin</h2>
+            <p>Toplam Kullanıcı sayısı: <span id="totalUsers">0</span></p>
+            <p>Toplam Eser sayısı: <span id="totalArtwork">0</span></p>
+            <p>Toplam banlanmış Eser sayısı: <span id="totalBanned">0</span></p>
+            <p>Toplam İstek sayısı: <span id="totalDesire">0</span></p>
+            <p>Toplam Tamamlanmış İstek sayısı: <span id="totalFinishDesire">0</span></p>
+            <p>Toplam Bekleyen İstek sayısı: <span id="totalWaitDesire">0</span></p>
+            <p>Toplam Ödenmemiş İstek sayısı: <span id="totalNotPaidDesire">0</span></p>
+            <p>Toplam Reddedilmiş İstek sayısı: <span id="totalDeniedDesire">0</span></p>
+            <a asp-area="" asp-controller="account" asp-action="LogOff">Çıkış Yap</a>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $("#btnLogin").addClass("active")
+            $.ajax({
+                typ: "GET",
+                url: "http://localhost:59959/api/Artwork/Counter",
+                success: function (response) {
+                    $("#totalArtwork").text(response.artworkQty)
+                    $("#totalBanned").text(response.bannedQty)
+                }
+            })
+            $.ajax({
+                typ: "GET",
+                url: "http://localhost:59959/api/Desire/Counter",
+                success: function (response) {                    
+                    $("#totalDesire").text(response.desireQty)
+                    $("#totalFinishDesire").text(response.finish)
+                    $("#totalWaitDesire").text(response.wait)
+                    $("#totalNotPaidDesire").text(response.notPaid)
+                    $("#totalDeniedDesire").text(response.denied)
+                }
+            })
+            $.ajax({
+                typ: "GET",
+                url: "http://localhost:59959/api/User/Counter",
+                success: function (response) {
+                    $("#totalUsers").text(response.userQty)
+                }
+            })
+        })
+    </script>
+}

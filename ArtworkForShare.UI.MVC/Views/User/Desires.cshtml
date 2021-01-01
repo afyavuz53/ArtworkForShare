@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewData["Title"] = "Desires";
+}
+@model int
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <table class="table table-responsive myTable" >
+                <thead>
+                    <tr>
+                        <th>Örnek Görsel</th>
+                        <th>Başlık</th>
+                        <th>Teklif</th>
+                        <th>Durum</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="tableDesire">
+                    <!-- İstekler -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+                $.ajax({
+                type: "GET",
+                    url: "http://localhost:59959/api/desire/GetDesireForUser?id="+@Model,
+                    success: function (input) {
+                    $.ajax({
+                        type: "POST",                        
+                        url: "../../desire/LoadDesireTable",
+                        data: JSON.stringify(input),
+                        contentType: "application/json; charset=utf-8",
+                        success: function (response) {
+                            $("#tableDesire").append(response)
+                            GetLightBox()
+                        }
+                    })
+                }
+            })
+        })
+    </script>
+}

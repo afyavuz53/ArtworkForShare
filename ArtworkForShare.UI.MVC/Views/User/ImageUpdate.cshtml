@@ -1,0 +1,120 @@
+﻿
+@{
+    ViewData["Title"] = "ImageUpdate";
+}
+<p class="col-lg-offset-2"><a asp-controller="user" asp-action="MyGallery">Çizimlerim</a>>Eseri Güncelle</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-sm-12" id="site">
+            <div class="login-content">
+                <form role="form">
+                    @*Image*@
+                    <div class="myArtworkImg">
+                        <div class="hex col-sm-6">
+                            <div>
+                                <div class="hexagon hexagon2 gallery-item">
+                                    <div class="hexagon-in1">
+                                        <div class="hexagon-in2" id="aImg1"
+                                             style="
+    background-image: url(../../Content/Images/emptyTuval.jpg);
+        ">
+                                            <div class="overlay">
+                                                <div id="myLink">
+                                                    <a id="aImg2" href="../../Content/Images/emptyTuval.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @*Image*@
+                    <div class="templatemo_form">
+                        <label class="myLabel">*Eserin Adı</label>
+                        <input id="Name" type="text" class="form-control" placeholder="*Eserin Adı" >
+                    </div>
+                    <div class="templatemo_form">
+                        <label class="myLabel">Açıklama</label>
+                        <input id="Description" type="text" class="form-control" placeholder="Açıklama" >
+                    </div>
+
+                </form>
+                <div class="eBtnZemin">
+                    <div class="eBtnBody">
+                        <button id="btnUpdate" class="eBtn eBtnBack">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Güncelle
+                        </button>
+                    </div>
+                </div>
+                <div id="alert">
+                </div>
+            </div>
+        </div>
+        <div class="atomMain" id="yukleniyor">
+            <div class="atomBody">
+                <main class="loadingMain">
+                    <div class="atom">
+                        <div class="electron"></div>
+                        <div class="electron-alpha"></div>
+                        <div class="electron-omega"></div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        var imgId =@ViewContext.RouteData.Values["id"];
+        var skip = 0
+        var image1 = document.getElementById("aImg1");
+        var image2 = document.getElementById("aImg2");
+        $(document).ready(function () {
+            $('#site').hide()
+            $.ajax({
+                type: 'GET',
+                url: 'http://localhost:59959/api/artwork/SingleArtworkById?id=' + imgId,
+                success: function (data) {
+                    $('#Name').val(data.name)
+                    $('#Description').val(data.description)
+                    image1.style.backgroundImage = "url('../../Content/images/" + data.url + "')";//background
+                    image2.href = "../../Content/images/" + data.url
+                    $('#yukleniyor').hide()
+                    $('#site').show()
+                    GetLightBox()
+                }
+            })
+        })
+        $('#btnUpdate').click(function () {
+            $('#site').hide()
+            $('#yukleniyor').show()
+            var update = {
+                ArtworkId: imgId,
+                Name:$('#Name').val(),
+                Description:$('#Description').val()
+            }
+            $.ajax({
+                type: 'POST',
+                url: 'http://localhost:59959/api/artwork/UpdateArtwork',
+                data: JSON.stringify(update),
+                contentType: 'application/json; charset=utf-8',
+                success: function (result) {
+                    if (result.check == true) {
+                        $("#alert").html("<div class='alert alert-success' role='alert'>" + result.message + "</div>")
+                    } else {
+                        $("#alert").html("<div class='alert alert-danger' role='alert'>" + result.message + "</div>")
+                    }
+                    $('#site').show()
+                    $('#yukleniyor').hide()
+                }
+            })
+        })
+
+    </script>
+}

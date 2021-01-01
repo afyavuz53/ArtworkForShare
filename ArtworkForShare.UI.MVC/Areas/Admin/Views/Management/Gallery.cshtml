@@ -1,0 +1,104 @@
+﻿
+@{
+    ViewData["Title"] = "Gallery";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container" id="site">
+    <div id="myGallery">
+    </div>
+    <div class="atomMain" id="yukleniyor">
+        <div class="atomBody">
+            <main class="loadingMain">
+                <div class="atom">
+                    <div class="electron"></div>
+                    <div class="electron-alpha"></div>
+                    <div class="electron-omega"></div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div class="col-md-2 col-md-offset-5" id="btnMoreDiv">
+        <div class="eBtnZemin">
+            <div class="eBtnBody">
+                <button id="btnMore" class="eBtn eBtnBack">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Daha Fazla
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        var skip = 0
+        $(document).ready(function () {
+            $("#btnGallery").addClass("active")
+            $("#btnMoreDiv").hide()
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:59959/api/Artwork/GetArtworkForAdmin?skip=" + skip,
+                success: function (input) {
+                    $.ajax({
+                        type: "POST",
+                        url: "LoadImages",
+                        data: JSON.stringify(input),
+                        contentType: "application/json; charset=utf-8",
+                        success: function (response) {
+                            $("#myGallery").html(response)
+                            $('#yukleniyor').hide()
+                            if (input.length == 9) {
+                                $("#btnMoreDiv").show()
+                            }
+                            GetLightBox()                            
+                        }
+                    })
+                }
+            })
+        })
+        $("#btnMore").click(function () {
+            $("#btnMoreDiv").hide()
+            $('#yukleniyor').show()
+            skip += 9            
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:59959/api/Artwork/GetArtworkForAdmin?skip=" + skip,
+                success: function (input) {
+                    $.ajax({
+                        type: "POST",
+                        url: "LoadImages",
+                        data: JSON.stringify(input),
+                        contentType: "application/json; charset=utf-8",
+                        success: function (response) {
+                            $("#myGallery").append(response)
+                            $('#yukleniyor').hide()
+                            if (input.length == 9) {
+                                $("#btnMoreDiv").show()
+                            }
+                            GetLightBox()                            
+                        }
+                    })
+                }
+            })
+        })
+        function Banned(id) {
+            var result = confirm("Görseli banlamak istediğinize emin misiniz?")
+            if (result) {
+                $.ajax({
+                    type: "GET",
+                    url: "http://localhost:59959/api/artwork/ImageBanned?aid="+id,
+                    success: function () {
+                        alert("Görsel banlandı.")
+                        location.reload()
+                    }
+                })
+            }
+        }
+    </script>
+}
+

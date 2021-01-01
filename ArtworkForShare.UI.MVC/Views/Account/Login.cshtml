@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="container">
+    <div class="row" id="site">
+        <div class="col-sm-4 col-sm-offset-4">
+            <div class="login-content">
+                <div>
+                    <form role="form" method="post">
+                        <div class="templatemo_form">
+                            <input name="Username" type="text" class="form-control" placeholder="Kullanıcı Adınız">
+                        </div>
+                        <div class="templatemo_form">
+                            <input name="password" type="Password" class="form-control" placeholder="Şifreniz">
+                        </div>
+                        <div class="eBtnZemin">
+                            <div class="eBtnBody">
+                                <button type="submit" class="eBtn eBtnBack" onclick="Loading()">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    Giriş Yap
+                                </button>
+                                <a asp-controller="account" asp-action="Register" class="eBtn">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    Kayıt Ol
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                    <a asp-controller="account" asp-action="RecoverPassword">Şifrenizi mi unuttunuz?</a>
+                </div>
+                @if (ViewContext.ViewBag.Message != null)
+                {
+                    <div class="alert alert-danger" role="alert">
+                        @ViewContext.ViewBag.Message
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="atomMain" id="yukleniyor">
+        <div class="atomBody">
+            <main class="loadingMain">
+                <div class="atom">
+                    <div class="electron"></div>
+                    <div class="electron-alpha"></div>
+                    <div class="electron-omega"></div>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $("#btnLogin").addClass("active")
+            $('#yukleniyor').hide()
+        })
+        function Loading() {
+            $('#site').hide(); // Diğer loader dışındakileri bir dive al ilk olarak sonra onu göster :)
+            $('#yukleniyor').show(); // Loader divini gizle
+        }
+    </script>
+}

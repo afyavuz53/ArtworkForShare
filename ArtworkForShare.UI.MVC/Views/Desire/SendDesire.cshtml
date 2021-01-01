@@ -1,0 +1,178 @@
+﻿
+@{
+    ViewData["Title"] = "SendDesire";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-sm-12">
+            <div class="login-content">
+                <div id="govde">
+
+                    <form role="form" method="post" enctype="multipart/form-data">
+                        @*Image*@
+                        <div class="myArtworkImg">
+                            <div class="hex col-sm-6">
+                                <div>
+                                    <div class="hexagon hexagon2 gallery-item">
+                                        <div class="hexagon-in1">
+                                            <div class="hexagon-in2" id="aImg1"
+                                                 style="
+    background-image: url(../../Content/Images/emptyTuval.jpg);
+        ">
+                                                <div class="overlay">
+                                                    <div id="myLink">
+                                                        <a id="aImg2" href="../../Content/Images/emptyTuval.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @*Image*@
+                        <div class="templatemo_form">
+                            <label class="myLabel">İstek atacağınız sanatçı</label>
+                            <select id="artistNV" class="form-control" disabled>
+                            </select>
+                        </div>
+                        <div class="templatemo_form">
+                            <label class="myLabel">İsteğinizin görseli</label>
+                            <input name="Image" id="imageFile" type="file" class="form-control" onchange="UpdateImg()" onclick="ClearAlert()">
+                        </div>
+                        <div class="templatemo_form">
+                            <label class="myLabel">Başlık</label>
+                            <input id="Title" type="text" class="form-control" placeholder="İsteğinizin başlığı" onclick="ClearAlert()">
+                        </div>
+                        <div class="templatemo_form">
+                            <label class="myLabel">Açıklama</label>
+                            <input id="Description" type="text" class="form-control" placeholder="Açıklama" onclick="ClearAlert()">
+                        </div>
+                        <div class="templatemo_form">
+                            <label class="myLabel">Teklifiniz</label>
+                            <input id="BidPrice" type="number" class="form-control" placeholder="0 ₺" onclick="ClearAlert()">
+                        </div>
+                        <div class="templatemo_form">
+                            <label class="myLabel">*Tam Adınız</label>
+                            <input id="Fullname" type="text" class="form-control" placeholder="Adınız soyadınız" onclick="ClearAlert()">
+                        </div>
+                        <div class="templatemo_form">
+                            <label class="myLabel">*E-mailiniz</label>
+                            <input id="eMail" type="email" class="form-control" placeholder="E-Mail" onclick="ClearAlert()">
+                        </div>
+                        <div class="templatemo_form">
+                            <label class="myLabel">*Telefon numaranız</label>
+                            <input id="PhoneNo" type="text" class="form-control" onclick="ClearAlert()">
+                        </div>
+                        <div class="templatemo_form">
+                            <label class="myLabel">*Adresiniz</label>
+                            <input id="Adress" type="text" class="form-control" placeholder="Kargo için" onclick="ClearAlert()">
+                        </div>
+                    </form>
+                    <div class="eBtnZemin">
+                        <div class="eBtnBody">
+                            <button id="btnSend" class="eBtn eBtnBack" onclick="SendDesire()">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                İstek Gönder
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div id="alert">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            GetLightBox()
+            var uid =@ViewContext.RouteData.Values["id"];
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:59959/api/user/GetName?uid=" + uid,
+                success: function (name) {
+                    $("#artistNV").append(new Option(name,uid))
+                }
+            })
+        })
+
+
+        function SendDesire() {
+            var formData = new FormData();
+            formData.append('file', $('#imageFile')[0].files[0])
+            $.ajax({
+                type: 'POST',
+                url: '../AddImage',
+                data: formData,
+                dataType: "json",
+                processData: false,
+                contentType: false,
+                success: function (newName) {
+                    if ($("#BidPrice").val() == '') {
+                        var price = 0
+                    } else {
+                        var price = $("#BidPrice").val()
+                    }
+                    var Input = {
+                        Fullname: $("#Fullname").val(),
+                        EMail: $("#eMail").val(),
+                        Adress: $("#Adress").val(),
+                        Phone: $("#PhoneNo").val(),
+                        Title: $("#Title").val(),
+                        Description: $("#Description").val(),
+                        RequestedImgUrl: newName.imgUrl,
+                        BidPrice: parseFloat(price),
+                        UserID: parseInt($("#artistNV").val())
+                    }
+                    $.ajax({
+                        type: "POST",
+                        url: "http://localhost:59959/api/Desire/AddDesire",
+                        data: JSON.stringify(Input),
+                        contentType: "application/json; charset=UTF-8",
+                        success: function (response) {
+                            console.log(response)
+                            if (response.check == true) {
+                                $("#alert").html("<div class='alert alert-success' role='alert'>" + response.message + "</div>")
+                                $("#govde").hide()
+                            } else {
+                                $("#alert").html("<div class='alert alert-danger' role='alert'>" + response.message + "</div>")
+                            }
+                        }
+                    })
+                }
+            })
+        }
+
+        function UpdateImg() {
+            var resim = document.getElementById("imageFile");
+            var image1 = document.getElementById("aImg1");
+            var image2 = document.getElementById("aImg2");
+            if (resim.files && resim.files[0]) {
+                var veri = new FileReader();//veri okuma apisi başlatıyoruz.
+
+                veri.onload = function () {//altta readAsDataURL verileri okuyoruz.O okuma tamamladığın da
+
+                    var adres = veri.result;//veriyi al
+                    //$("#pImg").attr("src", adres)
+                    image1.style.backgroundImage = "url('" + adres + "')";//background
+                    image2.href = adres
+                }
+                veri.readAsDataURL(resim.files[0]);//veri okuma
+            }
+
+        }
+
+        function ClearAlert() {
+            $("#alert").html("")
+        }
+    </script>
+}
+
+

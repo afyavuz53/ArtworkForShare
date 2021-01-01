@@ -1,0 +1,559 @@
+﻿:root {
+    --atom-size: 180px;
+    --atom-color-hex: #00d8ff;
+    --atom-color-rgb: 0, 216, 255;
+    --nucleus-size: calc(var(--atom-size)/5);
+    --electron-color-hex: #99f8ff;
+    --electron-size: calc(var(--atom-size)/25);
+    --electron-orbit-size: calc(var(--atom-size)/2.5);
+    --electron-speed: 1.2s;
+    --electron-speed-alpha: 1s;
+    --electron-speed-omega: .8s;
+}
+
+.eBtnZemin {
+    --bColor: #b69e40;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+.eBtnBody {
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+    /*height: 100vh;*/
+    /* background: #292830;*/
+    font-weight: bold;
+    width: 150px;
+    margin: auto;
+}
+
+.eBtnBack {
+    background: #2f3337;
+}
+
+.eBtn {
+    position: relative;
+    display: inline-block;
+    padding: 15px 20px;
+    margin: 20px 0;
+    color: var(--bColor);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    border-style: none;
+    /*margin-right: 50px;*/
+}
+
+    .eBtn:nth-child(2) {
+        filter: hue-rotate(190deg);
+    }
+
+    /*.eBtn:nth-child(2) {
+        filter: hue-rotate(110deg);
+    }*/
+
+    .eBtn span {
+        position: absolute;
+        display: block;
+    }
+
+        .eBtn span:nth-child(1) {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--bColor));
+            animation: animate1 1s linear infinite;
+        }
+
+@keyframes animate1 {
+    0% {
+        left: -100%;
+    }
+
+    50%, 100% {
+        left: 100%;
+    }
+}
+
+.eBtn span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, var(--bColor));
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+@keyframes animate2 {
+    0% {
+        top: -100%;
+    }
+
+    50%, 100% {
+        top: 100%;
+    }
+}
+
+.eBtn span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, var(--bColor));
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+
+@keyframes animate3 {
+    0% {
+        right: -100%;
+    }
+
+    50%, 100% {
+        right: 100%;
+    }
+}
+
+.eBtn span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, var(--bColor));
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%, 100% {
+        bottom: 100%;
+    }
+}
+
+.eBtn:hover {
+    background: var(--bColor);
+    color: #fff;
+    border-radius: 5 px;
+    box-shadow: 0 0 5px var(--bColor), 0 0 25px var(--bColor), 0 0 50px var(--bColor), 0 0 100px var(--bColor);
+}
+
+.myProfileImg {
+    position: relative;
+    height: 240px;
+    width: 200px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.myHexagonteam {
+    position: absolute;
+    width: 200px;
+    height: 350px;
+    top: -85px;
+}
+
+.myHexagon {
+    overflow: hidden;
+    visibility: hidden;
+    -webkit-transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+    -o-transform: rotate(120deg);
+    -ms-transform: rotate(120deg);
+    transform: rotate(120deg);
+    cursor: pointer;
+}
+
+.myHexagon-in1 {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -o-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+}
+
+.myHexagon-in2 {
+    /*-webkit-box-shadow: inset 0 0 0 200px rgba(176, 218, 212, 0.48);
+	box-shadow: inset 0 0 0 200px rgba(176, 218, 212, 0.48);*/
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    -webkit-background-size: 125%;
+    -moz-background-size: 125%;
+    background-size: 125%;
+    visibility: visible;
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -o-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.myImpHexa {
+    height: 230px;
+    width: 200px;
+    margin-top: 60px;
+    background-size: cover
+}
+
+.myArtworkImg {
+    position: relative;
+    height: 160px;
+    width: 200px;
+    margin: auto;
+    margin-top: 80px;
+}
+
+.myHeight {
+    /*height: 350px;*/
+    margin-bottom: 25%;
+}
+/* atom loading*/
+.atomMain,
+.atomBody {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #393e42;
+}
+
+.atomBody {
+    display: grid;
+    place-items: center;
+    box-sizing: border-box;
+}
+
+.atomMain,
+.atomMain:before,
+.atomMain::after {
+    box-sizing: border-box;
+}
+
+.atom {
+    position: relative;
+    width: var(--atom-size);
+    height: var(--atom-size);
+    animation: 8s atom infinite cubic-bezier(1, .25, 0, .75);
+}
+
+@keyframes atom {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    12.5% {
+        transform: rotate(-45deg) scale(.9);
+    }
+
+    25% {
+        transform: rotate(-90deg) scale(1);
+    }
+
+    37.5% {
+        transform: rotate(-135deg) scale(.9);
+    }
+
+    50% {
+        transform: rotate(-180deg) scale(1);
+    }
+
+    62.5% {
+        transform: rotate(-225deg) scale(.9);
+    }
+
+    75% {
+        transform: rotate(-270deg) scale(1);
+    }
+
+    87.5% {
+        transform: rotate(-315d) scale(.9);
+    }
+
+    100% {
+        transform: rotate(-360deg) scale(1);
+    }
+}
+
+.atom::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: var(--nucleus-size);
+    height: var(--nucleus-size);
+    margin-top: calc(var(--nucleus-size)/-2);
+    margin-left: calc(var(--nucleus-size)/-2);
+    background: var(--electron-color-hex);
+    border-radius: 100%;
+    box-shadow: 0 0 3px 0 var(--atom-color-hex);
+    animation: 2% nucleus infinite cubic-bezier(.65, 0, .35, 1);
+}
+
+@keyframes nucleus {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(.9);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(.85);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.atom > [class^="electron"] {
+    border-top: solid rgba(var(--atom-color-rgb), .5) 1px;
+    border-right: solid rgba(var(--atom-color-rgb), .35) 2px;
+    border-bottom: solid rgba(var(--atom-color-rgb), .2) 4px;
+    border-left: solid rgba(var(--atom-color-rgb), 0) 2px;
+    border-radius: 100%;
+    width: 100%;
+    height: var(--electron-orbit-size);
+    position: absolute;
+    top: 50%;
+    margin-top: calc(var(--electron-orbit-size)/-2);
+    animation: var(--electron-speed) electron-orbit infinite linear;
+}
+
+.atom > .electron-alpha {
+    transform: rotate(60deg);
+    animation: var(--electron-speed-alpha) electron-orbit infinite linear;
+}
+
+.atom > .electron-omega {
+    transform: rotate(-60deg);
+    animation: var(--electron-speed-omega) electron-orbit infinite linear;
+}
+
+@keyframes electron-orbit {
+    0% {
+        border-top: solid rgba(var(--atom-color-rgb), .5) 1px;
+        border-right: solid rgba(var(--atom-color-rgb), .35)2px;
+        border-bottom: solid rgba(var(--atom-color-rgb), .2)4px;
+        border-left: solid rgba(var(--atom-color-rgb), 0)2px;
+    }
+
+    25% {
+        border-top: solid rgba(var(--atom-color-rgb), .35)1px;
+        border-right: solid rgba(var(--atom-color-rgb), .2)2px;
+        border-bottom: solid rgba(var(--atom-color-rgb), 0)4px;
+        border-left: solid rgba(var(--atom-color-rgb), .5)2px;
+    }
+
+    50% {
+        border-top: solid rgba(var(--atom-color-rgb), .2)1px;
+        border-right: solid rgba(var(--atom-color-rgb), 0)2px;
+        border-bottom: solid rgba(var(--atom-color-rgb), .5)4px;
+        border-left: solid rgba(var(--atom-color-rgb), .35)2px;
+    }
+
+    75% {
+        border-top: solid rgba(var(--atom-color-rgb), 0)1px;
+        border-right: solid rgba(var(--atom-color-rgb), .5)2px;
+        border-bottom: solid rgba(var(--atom-color-rgb), .35)4px;
+        border-left: solid rgba(var(--atom-color-rgb), .2)2px;
+    }
+
+    100% {
+        border-top: solid rgba(var(--atom-color-rgb), .5)1px;
+        border-right: solid rgba(var(--atom-color-rgb), .35)2px;
+        border-bottom: solid rgba(var(--atom-color-rgb), .2)4px;
+        border-left: solid rgba(var(--atom-color-rgb), 0)2px;
+    }
+}
+
+.atom > [class^="electron"]::after {
+    content: '';
+    display: block;
+    width: var(--electron-size);
+    height: var(--electron-size);
+    background: var(--electron-color-hex);
+    border-radius: 50%;
+    margin-top: calc(var(--electron-size));
+    position: absolute;
+    top: 50%;
+    left: calc(var(--electron-size)/-1);
+    transform: scale(1);
+    animation: calc(var(--electron-size)*2) electron infinite ease-in-out;
+}
+
+.atom .electron::after {
+    animation: calc(var(--electron-speed)*2) electron infinite ease-in-out;
+}
+
+.atom .electron-alpha::after {
+    animation: calc(var(--electron-speed-alpha)*2) electron infinite ease-in-out;
+}
+
+.atom .electron-omega::after {
+    animation: calc(var(--electron-speed-omega)*2) electron infinite ease-in-out;
+}
+
+@keyframes electron {
+    0% {
+        left: calc(var(--electron-size)/-1);
+        transform: scale(1);
+    }
+
+    12.5% {
+        top: 100%;
+        transform: scale(1.5);
+    }
+
+    25% {
+        left: 100%;
+        transform: scale(1);
+    }
+
+    37.5% {
+        top: 0%;
+        transform: scale(.25);
+    }
+
+    50% {
+        left: calc(var(--electron-size)/-1);
+        transform: scale(1);
+    }
+
+    62.5% {
+        top: 100%;
+        transform: scale(1.5);
+    }
+
+    75% {
+        left: 100%;
+        transform: scale(1);
+    }
+
+    87.5% {
+        top: 0%;
+        transform: scale(.25);
+    }
+
+    100% {
+        left: calc(var(--electron-size)/-1);
+        transform: scale(1);
+    }
+}
+
+.loadingMain {
+    position: relative;
+}
+
+    .loadingMain::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 115%;
+        left: 0;
+        width: var(--atom-size);
+        height: var(--nucleus-size);
+        background-image: radial-gradient(closest-side, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0));
+        border-radius: 100%;
+        transform: scale(1, .8);
+        animation: 8s shadow infinite cubic-bezier(1, .25, 0, .75);
+    }
+
+@keyframes shadow {
+    0% {
+        transform: scale(1, .8) translateY(0);
+    }
+
+    12.5% {
+        transform: scale(.7, .7)translateY(-20px);
+    }
+
+    25% {
+        transform: scale(1, .8) translateY(0);
+    }
+
+    37.5% {
+        transform: scale(.7, .7) translateY(-20px);
+    }
+
+    50% {
+        transform: scale(1, .8) translateY(0);
+    }
+
+    62.5% {
+        transform: scale(.7, .7) translateY(-20px);
+    }
+
+    75% {
+        transform: scale(1, .8) translateY(0);
+    }
+
+    87.5% {
+        transform: scale(.7, .7) translateY(-20px);
+    }
+
+    100% {
+        transform: scale(1, .8) translateY(0);
+    }
+}
+/* atom loading*/
+#myLink {
+    position: relative;
+    margin-top: -16px;
+    margin-left: -35px;
+    top: 50%;
+    left: 50%;
+    height: 32px;
+    width: 70px;
+}
+
+.profilBody {
+    /*width: 200px;*/
+    height: 250px;
+}
+
+.userGaleryBtn {
+    margin-top: 2px;
+}
+
+.myTable {
+    font-size: 20px;
+    font-family: phenomenaregular;
+}
+.navbarFont {
+    font-family: ave_fedan_personal;
+}
+canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

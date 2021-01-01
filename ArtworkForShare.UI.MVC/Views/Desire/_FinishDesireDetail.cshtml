@@ -1,0 +1,15 @@
+﻿@model DesireDetailVM
+
+<div class="col-sm-4">
+    <h2>İstek resim</h2>
+    <img id="imgRequest" href="../../Content/ClaimImages/@Model.RequestImg" src="../../Content/ClaimImages/@Model.RequestImg" data-rel="lightbox" alt="Eser" style="max-width: 100%; height: auto;" />
+</div>
+<div class="col-sm-4" style="font-size:medium; text-align:left;margin-top: 5%;">
+    <p id="title"><label>Başlık: </label> @Model.Title</p>
+    <p id="description"><label>Açıklama: </label> @Model.Description</p>
+    <p id="bidPrice"><label>Teklif: </label> @Model.BidPrice ₺</p>    
+</div>
+<div class="col-sm-4">
+    <h2>Çizim</h2>
+    <img id="aImg" href="../../Content/ClaimImages/@Model.MadedImg" src="../../Content/ClaimImages/@Model.MadedImg" data-rel="lightbox" alt="Eser" style="max-width: 100%; height: auto;" />
+</div>

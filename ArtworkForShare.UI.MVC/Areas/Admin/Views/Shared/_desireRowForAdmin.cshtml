@@ -1,0 +1,13 @@
+﻿
+@model List<DesireForAdminVM>
+
+@foreach (DesireForAdminVM item in Model)
+{
+    <tr>
+        <td><a href="../../../Content/ClaimImages/@item.RequestedImgUrl" data-rel="lightbox" class="btn btn-info myLink fa fa-expand"></a></td>
+        <td><a href="../../../Content/ClaimImages/@item.MadeImgUrl" data-rel="lightbox" class="btn btn-info myLink fa fa-expand"></a></td>
+        <td>@item.UserName</td>
+        <td>@item.BidPrice ₺</td>
+        <td>@item.State</td>
+    </tr>
+}

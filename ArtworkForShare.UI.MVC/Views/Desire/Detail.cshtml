@@ -1,0 +1,102 @@
+﻿
+@{
+    ViewData["Title"] = "Detail";
+}
+<p class="col-lg-offset-2"><a asp-controller="user" asp-action="desires">İstekler</a>>Detay</p>
+<div class="container">
+    <div class="row login-content " id="desireDetail">
+        
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            var id=@ViewContext.RouteData.Values["id"]
+             $.ajax({
+                 type: "GET",
+                 url: "http://localhost:59959/api/desire/GetDetailById?id="+id,
+                 success: function (result) {
+                     $.ajax({
+                         type: "POST",
+                         url: "../GetDesireDetail",
+                         data: JSON.stringify(result),
+                         contentType: "application/json; charset=utf-8",
+                         success: function (response) {
+                             $("#desireDetail").html(response)
+                         }
+                     })
+                 }
+             })
+            GetLightBox()
+        })
+
+        function UpdateImg() {
+            var resim = document.getElementById("imageFile");
+            var image = document.getElementById("aImg");
+
+            if (resim.files && resim.files[0]) {
+                var veri = new FileReader();//veri okuma apisi başlatıyoruz.
+
+                veri.onload = function () {//altta readAsDataURL verileri okuyoruz.O okuma tamamladığın da
+
+                    var adres = veri.result;//veriyi al
+                    //$("#pImg").attr("src", adres)
+                    image.href = adres;//background
+                    image.src=adres
+
+                }
+                veri.readAsDataURL(resim.files[0]);//veri okuma
+            }
+
+        }
+
+        function ClearAlert() {
+            $("#alert").html("")
+        }
+
+        function BtnAccept() {
+            var id=@ViewContext.RouteData.Values["id"];
+            var formData = new FormData();
+            formData.append('file', $('#imageFile')[0].files[0])
+            $.ajax({
+                type: 'POST',
+                url: '../AddImage',
+                data: formData,
+                dataType: "json",
+                processData: false,
+                contentType: false,
+                success: function (newName) {
+                    //newName.imgUrl
+                    $.ajax({
+                        type: "GET",
+                        url: "http://localhost:59959/api/Desire/UpdateDesire?name=" + newName.imgUrl+"&dId="+id,
+                        success: function (response) {
+                            if (response.check == true) {
+                                $("#alert").html("<div class='alert alert-success' role='alert'>" + response.message + "</div>")
+                                location.reload();
+                            } else {
+                                $("#alert").html("<div class='alert alert-danger' role='alert'>" + response.message + "</div>")
+                            }
+                        }
+                    })
+                }
+            })
+        }
+
+        function BtnCancel() {
+            var check = confirm("Emin misiniz?")
+            if (check) {
+                var id=@ViewContext.RouteData.Values["id"];
+                $.ajax({
+                    type: "GET",
+                    url: "http://localhost:59959/api/Desire/RefuseDesire?dId="+id,
+                    success: function () {
+                        location.reload();
+                    }
+                })
+            }
+        }
+
+    </script>
+}

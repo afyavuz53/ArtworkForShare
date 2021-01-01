@@ -1,0 +1,12 @@
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.Model\bin\Debug\netcoreapp3.1\ArtworkForShare.Model.deps.json
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.Model\bin\Debug\netcoreapp3.1\ArtworkForShare.Model.dll
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.Model\bin\Debug\netcoreapp3.1\ArtworkForShare.Model.pdb
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.Model\bin\Debug\netcoreapp3.1\ArtworkForShare.Core.dll
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.Model\bin\Debug\netcoreapp3.1\ArtworkForShare.Core.pdb
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.Model\obj\Debug\netcoreapp3.1\ArtworkForShare.Model.csprojAssemblyReference.cache
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.Model\obj\Debug\netcoreapp3.1\ArtworkForShare.Model.AssemblyInfoInputs.cache
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.Model\obj\Debug\netcoreapp3.1\ArtworkForShare.Model.AssemblyInfo.cs
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.Model\obj\Debug\netcoreapp3.1\ArtworkForShare.Model.csproj.CoreCompileInputs.cache
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.Model\obj\Debug\netcoreapp3.1\ArtworkForShare.Model.csproj.CopyComplete
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.Model\obj\Debug\netcoreapp3.1\ArtworkForShare.Model.dll
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.Model\obj\Debug\netcoreapp3.1\ArtworkForShare.Model.pdb

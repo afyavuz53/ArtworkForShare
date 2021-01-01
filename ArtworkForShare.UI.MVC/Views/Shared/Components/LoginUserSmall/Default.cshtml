@@ -1,0 +1,17 @@
+﻿@model LoginUser
+
+@if (!string.IsNullOrEmpty(Model.UserName))
+{
+    if (Model.UserName != "Admin")
+    {
+        <li><a class="show-5 templatemo_page5" asp-controller="User" asp-action="Profile">@Model.UserName</a></li>
+    }
+    else
+    {
+        <li><a class="show-5 templatemo_page5" asp-area="admin" asp-controller="Management" asp-action="index">@Model.UserName</a></li>
+    }
+}
+else
+{
+    <li><a class="show-5 templatemo_page5" asp-controller="Account" asp-action="Login">Giriş Yap</a></li>
+}

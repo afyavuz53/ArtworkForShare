@@ -1,0 +1,16 @@
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.BLL\bin\Debug\netcoreapp3.1\ArtworkForShare.BLL.deps.json
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.BLL\bin\Debug\netcoreapp3.1\ArtworkForShare.BLL.dll
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.BLL\bin\Debug\netcoreapp3.1\ArtworkForShare.BLL.pdb
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.BLL\bin\Debug\netcoreapp3.1\ArtworkForShare.Core.dll
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.BLL\bin\Debug\netcoreapp3.1\ArtworkForShare.DAL.dll
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.BLL\bin\Debug\netcoreapp3.1\ArtworkForShare.Model.dll
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.BLL\bin\Debug\netcoreapp3.1\ArtworkForShare.Core.pdb
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.BLL\bin\Debug\netcoreapp3.1\ArtworkForShare.DAL.pdb
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.BLL\bin\Debug\netcoreapp3.1\ArtworkForShare.Model.pdb
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.BLL\obj\Debug\netcoreapp3.1\ArtworkForShare.BLL.csprojAssemblyReference.cache
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.BLL\obj\Debug\netcoreapp3.1\ArtworkForShare.BLL.AssemblyInfoInputs.cache
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.BLL\obj\Debug\netcoreapp3.1\ArtworkForShare.BLL.AssemblyInfo.cs
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.BLL\obj\Debug\netcoreapp3.1\ArtworkForShare.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.BLL\obj\Debug\netcoreapp3.1\ArtworkForShare.BLL.csproj.CopyComplete
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.BLL\obj\Debug\netcoreapp3.1\ArtworkForShare.BLL.dll
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.BLL\obj\Debug\netcoreapp3.1\ArtworkForShare.BLL.pdb

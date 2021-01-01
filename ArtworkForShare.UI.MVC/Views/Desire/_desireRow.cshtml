@@ -1,0 +1,13 @@
+﻿
+@model List<DesireTableItemVM>
+
+@foreach (DesireTableItemVM item in Model)
+{
+<tr>
+    <td><a href="../../../Content/ClaimImages/@item.Requestİmg" data-rel="lightbox" class="btn btn-info myLink fa fa-expand"></a></td>
+    <td>@item.Title</td>
+    <td>@item.BidPrice ₺</td>
+    <td>@item.StateDesire</td>
+    <td><a asp-controller="desire" asp-action="detail" asp-route-id="@item.DesireId"><i class="fa fa-search"></i></a></td>
+</tr>
+}

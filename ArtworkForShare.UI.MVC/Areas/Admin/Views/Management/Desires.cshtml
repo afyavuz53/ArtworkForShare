@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewData["Title"] = "Desires";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <table class="table table-responsive myTable">
+                <thead>
+                    <tr>
+                        <th>İstek Çizim</th>
+                        <th>Çizilen</th>
+                        <th>İstek Yaplan</th>
+                        <th>Teklif</th>
+                        <th>Durum</th>
+                    </tr>
+                </thead>
+                <tbody id="tableDesire">
+                    <!-- İstekler -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $("#btnDesires").addClass("active")
+                $.ajax({
+                type: "GET",
+                    url: "http://localhost:59959/api/desire/GetAllDesire",
+                    success: function (input) {
+                    $.ajax({
+                        type: "POST",
+                        url: "LoadDesireTable",
+                        data: JSON.stringify(input),
+                        contentType: "application/json; charset=utf-8",
+                        success: function (response) {
+                            $("#tableDesire").append(response)
+                            GetLightBox()
+                        }
+                    })
+                }
+            })
+        })
+    </script>
+}
+

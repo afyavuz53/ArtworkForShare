@@ -1,0 +1,41 @@
+﻿@model List<UserSmallVM>
+
+@foreach (UserSmallVM item in Model)
+{
+    <div class="profilBody col-md-3 col-sm-3">
+        <div class="col-md-4 col-sm-4">
+            <div class="hexagon hexagonteam gallery-item">
+                <div class="hexagon-in1">
+                    <div class="hexagon-in2" style="        background-image: url(../../content/images/@item.NameUrl);">
+                        <div class="overlay templatemo_overlay1">
+                            <a asp-area="admin" asp-controller="management" asp-action="ArtistArtworks" asp-route-id="@item.UserID">
+                                <div class="smallhexagon">
+                                    <span class="fa fa-user"></span>
+                                </div>
+                            </a>
+                            <a href="#tw">
+                                <div class="smallhexagon">
+                                    <span class="fa fa-twitter"></span>
+                                </div>
+                            </a>
+
+                            <a href="#ln">
+                                <div class="smallhexagon">
+                                    <span class="fa fa-linkedin"></span>
+                                </div>
+                            </a>
+
+                            <a href="#rs">
+                                <div class="smallhexagon">
+                                    <span class="fa fa-rss"></span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="overlay templatemo_overlaytxt"><b>@item.UserName</b></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

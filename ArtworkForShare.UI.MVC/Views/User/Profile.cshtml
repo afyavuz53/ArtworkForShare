@@ -1,0 +1,171 @@
+﻿
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<div id="menu-3">
+    <div class="container">
+        <div class="row templatemo_servicerow">
+            <div class="templatemo_hexservices col-sm-6">
+                <div class="blok text-center">
+                    <div class="hexagon-a">
+                        <a class="hlinktop" asp-controller="user" asp-action="update">
+                            <div class="hexa-a">
+                                <div class="hcontainer-a">
+                                    <div class="vertical-align-a">
+                                        <span class="texts-a"><i class="fa fa-cogs"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="hexagonservices">
+                        <a class="hlinkbott">
+                            <div class="hexa">
+                                <div class="hcontainer">
+                                    <div class="vertical-align">
+                                        <span class="texts"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="templatemo_servicetext marginOrt">
+                    <h3>Profil Düzenle</h3>
+                    <p>Kişisel bilgilerinizi düzeltebilir, profil resmi ekleme ve değiştirme işlemlerini gerçekleştirebilirsiniz.</p>
+                </div>
+            </div>
+            <div class="templatemo_hexservices col-sm-6">
+                <div class="blok text-center">
+                    <div class="hexagon-a">
+                        <a class="hlinktop" asp-controller="User" asp-action="MyGallery">
+                            <div class="hexa-a">
+                                <div class="hcontainer-a">
+                                    <div class="vertical-align-a">
+                                        <span class="texts-a"><i class="fa fa-picture-o"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="hexagonservices">
+                        <a class="hlinkbott" href="#">
+                            <div class="hexa">
+                                <div class="hcontainer">
+                                    <div class="vertical-align">
+                                        <span class="texts"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="templatemo_servicetext marginOrt">
+                    <h3>Çizimlerim</h3>
+                    <p>Tüm çizimlerinizi görebilir ve değiştirip düzeltebilirsiniz.</p>
+                </div>
+            </div>
+            <div class="templatemo_hexservices col-sm-6">
+                <div class="blok text-center">
+                    <div class="hexagon-a">
+                        <a class="hlinktop" asp-controller="User" asp-action="AddArtwork">
+                            <div class="hexa-a">
+                                <div class="hcontainer-a">
+                                    <div class="vertical-align-a">
+                                        <span class="texts-a"><i class="fa fa-pencil-square-o"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="hexagonservices">
+                        <a class="hlinkbott" href="#">
+                            <div class="hexa">
+                                <div class="hcontainer">
+                                    <div class="vertical-align">
+                                        <span class="texts"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="templatemo_servicetext marginOrt">
+                    <h3>Çizim Ekleme</h3>
+                    <p>Yaptığınız çizimleri sitemize ekleyebilirsiniz.</p>
+                </div>
+            </div>
+            <div class="templatemo_hexservices col-sm-6">
+                <div class="blok text-center">
+                    <div class="hexagon-a">
+                        <a class="hlinktop" asp-controller="User" asp-action="Desires">
+                            <div class="hexa-a">
+                                <div class="hcontainer-a">
+                                    <div class="vertical-align-a">
+                                        <span class="texts-a"><i class="fa fa-thumb-tack"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="hexagonservices">
+                        <a class="hlinkbott" href="#">
+                            <div class="hexa">
+                                <div class="hcontainer">
+                                    <div class="vertical-align">
+                                        <span class="texts"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="templatemo_servicetext marginOrt">
+                    <h3>İstekler</h3>
+                    <p>Tarafınıza gönderilen çizim isteklerini görebilir. Kabul veya reddedebilirsiniz.</p>
+                </div>
+            </div>
+            <div class="templatemo_hexservices col-sm-6">
+                <div class="blok text-center">
+                    <div class="hexagon-a">
+                        <a class="hlinktop" asp-controller="account" asp-action="LogOff">
+                            <div class="hexa-a">
+                                <div class="hcontainer-a">
+                                    <div class="vertical-align-a">
+                                        <span class="texts-a"><i class="fa fa-power-off"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="hexagonservices">
+                        <a class="hlinkbott">
+                            <div class="hexa">
+                                <div class="hcontainer">
+                                    <div class="vertical-align">
+                                        <span class="texts"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="templatemo_servicetext marginOrt">
+                    <h3>Çıkış Yap</h3>
+                    <p>Profilinizden çıkış yaparsınız.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+@section scripts{
+    <script>        
+        $(document).ready(function () {
+            $("#btnLogin").addClass("active")
+        })
+    </script>
+}

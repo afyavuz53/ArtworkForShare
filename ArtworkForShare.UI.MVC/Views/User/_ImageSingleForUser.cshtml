@@ -1,0 +1,73 @@
+﻿@model ImageVM
+<div class="row templatemorow myHeight">
+    @for (int i = 0; i < Model.ArtworkIds.Length; i++)
+    {
+        <div class="hex col-sm-6">
+            <div>
+                <div class="hexagon hexagon2 gallery-item">
+                    <div class="hexagon-in1">
+                        <div class="hexagon-in2" style="background-image: url(../../Content/Images/@Model.Urls[i]);">
+                            <div class="overlay">
+                                <div id="myLink">
+                                    <a href="../../Content/Images/@Model.Urls[i]" data-rel="lightbox" class="myLink fa fa-expand"></a>
+                                    <a asp-controller="Home" asp-action="ImageDetail" asp-route-id="@Model.ArtworkIds[i]" class="fa fa-search"></a>
+                                    <a asp-controller="User" asp-action="ImageUpdate" asp-route-id="@Model.ArtworkIds[i]" class="userGaleryBtn fa fa-pencil-square-o"></a>
+                                    <a id="btnDelete" class="userGaleryBtn fa fa-trash-o" onclick="DeleteImg(@Model.ArtworkIds[i])"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        if (i==4)
+        {
+            break;
+        }
+    }
+    @if (Model.ArtworkIds.Length > 5)
+    {
+        <div class="hex col-sm-6 templatemo-hex-top1 templatemo-hex-top3" style="margin-left:110px">
+            <div>
+                <div class="hexagon hexagon2 gallery-item">
+                    <div class="hexagon-in1">
+                        <div class="hexagon-in2" style="        background-image: url(../../Content/Images/@Model.Urls[5]);">
+                            <div class="overlay">
+                                <div id="myLink">
+                                    <a href="../../Content/Images/@Model.Urls[5]" data-rel="lightbox" class="myLink fa fa-expand"></a>
+                                    <a asp-controller="Home" asp-action="ImageDetail" asp-route-id="@Model.ArtworkIds[5]" class="fa fa-search"></a>
+                                    <a asp-controller="User" asp-action="ImageUpdate" asp-route-id="@Model.ArtworkIds[5]" class="userGaleryBtn fa fa-pencil-square-o"></a>
+                                    <a id="btnDelete" class="userGaleryBtn fa fa-trash-o" onclick="DeleteImg(@Model.ArtworkIds[5])"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        if (Model.ArtworkIds.Length > 6)
+        {
+            for (int i = 6; i < Model.ArtworkIds.Length; i++)
+            {
+                <div class="hex col-sm-6 templatemo-hex-top1 templatemo-hex-top3">
+                    <div>
+                        <div class="hexagon hexagon2 gallery-item">
+                            <div class="hexagon-in1">
+                                <div class="hexagon-in2" style="        background-image: url(../../Content/Images/@Model.Urls[i]);">
+                                    <div class="overlay">
+                                        <div id="myLink">
+                                            <a href="../../Content/Images/@Model.Urls[i]" data-rel="lightbox" class="myLink fa fa-expand"></a>
+                                            <a asp-controller="Home" asp-action="ImageDetail" asp-route-id="@Model.ArtworkIds[i]" class="fa fa-search"></a>
+                                            <a asp-controller="User" asp-action="ImageUpdate" asp-route-id="@Model.ArtworkIds[i]" class="userGaleryBtn fa fa-pencil-square-o"></a>
+                                            <a id="btnDelete" class="userGaleryBtn fa fa-trash-o" onclick="DeleteImg(@Model.ArtworkIds[i])"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    }
+</div>

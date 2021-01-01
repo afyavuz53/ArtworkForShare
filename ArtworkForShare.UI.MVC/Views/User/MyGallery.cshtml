@@ -1,0 +1,109 @@
+﻿
+@{
+    ViewData["Title"] = "MyGallery";
+}
+@model int
+
+<div class="container" id="site">
+    <div id="myGallery">
+    </div>
+    <div class="atomMain" id="yukleniyor">
+        <div class="atomBody">
+            <main class="loadingMain">
+                <div class="atom">
+                    <div class="electron"></div>
+                    <div class="electron-alpha"></div>
+                    <div class="electron-omega"></div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div class="col-md-2 col-md-offset-5" id="btnMoreDiv">
+        <div class="eBtnZemin">
+            <div class="eBtnBody">
+                <button id="btnMore" class="eBtn eBtnBack">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Daha Fazla
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section scripts{
+    <script>
+        //$(window).load(function () {
+        //    $('#yukleniyor').hide(); // Loader divini gizle
+        //    $('#site').show(); // Diğer loader dışındakileri bir dive al ilk olarak sonra onu göster :)
+        //});
+        var skip=0
+        var uid =@Model
+            $(document).ready(function () {
+                $("#btnMoreDiv").hide()
+                $.ajax({
+                    type: "GET",
+                    url: "http://localhost:59959/api/Artwork/GetArtworkByID?uid=" + uid + "&skip=" + skip,
+                    success: function (input) {
+                        $.ajax({
+                            type: "POST",
+                            url: "../User/LoadImages",
+                            data: JSON.stringify(input),
+                            contentType: "application/json; charset=utf-8",
+                            success: function (response) {
+                                $("#myGallery").html(response)
+                                $('#yukleniyor').hide()
+                                if (input.length == 9) {
+                                    $("#btnMoreDiv").show()
+                                }
+                                GetLightBox()
+                            }
+                        })
+                    }
+                })
+        })
+            $("#btnMore").click(function () {
+                $("#btnMoreDiv").hide()
+                $('#yukleniyor').show()
+                skip+=9
+                $.ajax({
+                    type: "GET",
+                    url: "http://localhost:59959/api/Artwork/GetArtworkByID?uid=" + uid + "&skip=" + skip,
+                    success: function (input) {
+                        $.ajax({
+                            type: "POST",
+                            url: "../User/LoadImages",
+                            data: JSON.stringify(input),
+                            contentType: "application/json; charset=utf-8",
+                            success: function (response) {
+                                $("#myGallery").append(response)
+                                $('#yukleniyor').hide()
+                                if (input.length==9) {
+                                    $("#btnMoreDiv").show()
+                                }
+                                GetLightBox()
+                            }
+                        })
+                    }
+                })
+        })
+
+        function DeleteImg(id) {
+            var check = confirm('Silmek istediğinize emin misiniz?')
+            if (check) {
+            $.ajax({
+                type: 'GET',
+                url: 'http://localhost:59959/api/Artwork/DeleteById?id=' + id,
+                success: function () {
+                    alert('Çizim silindi.')
+                    window.location.reload()
+                }
+            })
+            }
+        }
+    </script>
+}

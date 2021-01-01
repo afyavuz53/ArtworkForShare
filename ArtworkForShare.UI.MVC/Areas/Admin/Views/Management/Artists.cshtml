@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewData["Title"] = "Artists";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container">
+    <div class="row col-md-6 col-md-offset-3">
+        <input class="form-control" type="text" id="search" placeholder="Artist Ara" style="margin-bottom:10%" onkeyup="Search()" />
+    </div>
+</div>
+<div id="menu-2">
+    <div class="templatemo_ourteam">
+        <div class="container templatemo_hexteam">
+            <div class="atomMain" id="yukleniyor">
+                <div class="atomBody">
+                    <main class="loadingMain">
+                        <div class="atom">
+                            <div class="electron"></div>
+                            <div class="electron-alpha"></div>
+                            <div class="electron-omega"></div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+            <div class="row" id="artistProfiles">
+                <!-- Profiller-->
+               
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<!--team end-->
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $("#btnTeam").addClass("active")
+            GetAll()
+        })
+        function GetAll() {
+            $.ajax({
+                type: 'Get',
+                url: 'http://localhost:59959/api/user/GetUserAll',
+                success: function (input) {
+                    $.ajax({
+                        url: "GetArtistList",
+                        type: "POST",
+                        data: JSON.stringify(input),
+                        contentType: "application/json; charset=utf-8",
+                        success: function (response) {
+                            $('#artistProfiles').html(response)
+                            $('#yukleniyor').hide()
+                            $('#menu-2').show()
+                        }
+                    })
+                }
+            })
+        }
+        function Search() {
+            $('#menu-2').hide()
+            $('#yukleniyor').show()
+            var text = $("#search").val()
+            if (text != '') {
+                $.ajax({
+                    type: 'Get',
+                    url: 'http://localhost:59959/api/user/GetUserByText?text=' + text,
+                    success: function (input) {
+                        $.ajax({
+                            url: "GetArtistList",
+                            type: "POST",
+                            data: JSON.stringify(input),
+                            contentType: "application/json; charset=utf-8",
+                            success: function (response) {
+                                $('#artistProfiles').html(response)
+                                $('#yukleniyor').hide()
+                                $('#menu-2').show()
+                            }
+                        })
+                    }
+                })
+            } else {
+                GetAll()
+            }
+        }
+    </script>
+}

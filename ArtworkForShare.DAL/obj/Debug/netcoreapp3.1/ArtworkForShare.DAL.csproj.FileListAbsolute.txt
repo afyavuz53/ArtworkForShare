@@ -1,0 +1,17 @@
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.DAL\bin\Debug\netcoreapp3.1\ArtworkForShare.Core.dll
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.DAL\bin\Debug\netcoreapp3.1\ArtworkForShare.Model.dll
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.DAL\obj\Debug\netcoreapp3.1\ArtworkForShare.DAL.csprojAssemblyReference.cache
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.DAL\obj\Debug\netcoreapp3.1\ArtworkForShare.DAL.AssemblyInfoInputs.cache
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.DAL\obj\Debug\netcoreapp3.1\ArtworkForShare.DAL.AssemblyInfo.cs
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.DAL\bin\Debug\netcoreapp3.1\ArtworkForShare.DAL.deps.json
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.DAL\bin\Debug\netcoreapp3.1\ArtworkForShare.DAL.runtimeconfig.json
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.DAL\bin\Debug\netcoreapp3.1\ArtworkForShare.DAL.runtimeconfig.dev.json
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.DAL\bin\Debug\netcoreapp3.1\ArtworkForShare.DAL.dll
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.DAL\bin\Debug\netcoreapp3.1\ArtworkForShare.DAL.pdb
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.DAL\bin\Debug\netcoreapp3.1\ArtworkForShare.Model.pdb
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.DAL\bin\Debug\netcoreapp3.1\ArtworkForShare.Core.pdb
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.DAL\obj\Debug\netcoreapp3.1\ArtworkForShare.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.DAL\obj\Debug\netcoreapp3.1\ArtworkForShare.DAL.csproj.CopyComplete
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.DAL\obj\Debug\netcoreapp3.1\ArtworkForShare.DAL.dll
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.DAL\obj\Debug\netcoreapp3.1\ArtworkForShare.DAL.pdb
+C:\Users\Ahmet Yavuz\Desktop\ProjeOdevi\ArtworkForShare\ArtworkForShare.DAL\obj\Debug\netcoreapp3.1\ArtworkForShare.DAL.genruntimeconfig.cache

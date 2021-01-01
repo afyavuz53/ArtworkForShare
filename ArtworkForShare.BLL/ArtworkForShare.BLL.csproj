@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ArtworkForShare.Core\ArtworkForShare.Core.csproj" />
+    <ProjectReference Include="..\ArtworkForShare.DAL\ArtworkForShare.DAL.csproj" />
+    <ProjectReference Include="..\ArtworkForShare.Model\ArtworkForShare.Model.csproj" />
+  </ItemGroup>
+
+</Project>

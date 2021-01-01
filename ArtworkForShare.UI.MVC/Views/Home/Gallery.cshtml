@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewData["Title"] = "Gallery";
+}
+
+<div class="container" id="site">
+    <div id="myGallery">
+    </div>
+    <div class="atomMain" id="yukleniyor">
+        <div class="atomBody">
+            <main class="loadingMain">
+                <div class="atom">
+                    <div class="electron"></div>
+                    <div class="electron-alpha"></div>
+                    <div class="electron-omega"></div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div class="col-md-2 col-md-offset-5" id="btnMoreDiv">
+        <div class="eBtnZemin">
+            <div class="eBtnBody">
+                <button id="btnMore" class="eBtn eBtnBack">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Daha Fazla
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        var skip = 0
+        $(document).ready(function () {
+            $("#btnGallery").addClass("active")
+            $("#btnMoreDiv").hide()
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:59959/api/Artwork/GetArtwork?skip=" + skip,
+                success: function (input) {
+                    $.ajax({
+                        type: "POST",
+                        url: "home/LoadImages",
+                        data: JSON.stringify(input),
+                        contentType: "application/json; charset=utf-8",
+                        success: function (response) {
+                            $("#myGallery").html(response)
+                            $('#yukleniyor').hide()
+                            if (input.length == 9) {
+                                $("#btnMoreDiv").show()
+                            }
+                            GetLightBox()
+                        }
+                    })
+                }
+            })
+        })
+        $("#btnMore").click(function () {
+            $("#btnMoreDiv").hide()
+            $('#yukleniyor').show()
+            skip += 9
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:59959/api/Artwork/GetArtwork?skip=" + skip,
+                success: function (input) {
+                    $.ajax({
+                        type: "POST",
+                        url: "Home/LoadImages",
+                        data: JSON.stringify(input),
+                        contentType: "application/json; charset=utf-8",
+                        success: function (response) {
+                            $("#myGallery").append(response)
+                            $('#yukleniyor').hide()
+                            if (input.length == 9) {
+                                $("#btnMoreDiv").show()
+                            }
+                            GetLightBox()
+                        }
+                    })
+                }
+            })
+        })
+    </script>
+}

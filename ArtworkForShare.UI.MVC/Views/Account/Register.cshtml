@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewData["Title"] = "Register";
+}
+@model registerVM
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-sm-12">
+            <div class="login-content">
+                <form role="form" method="post">
+                    <div class="templatemo_form">
+                        <input id="FirstName" name="FirstName" type="text" class="form-control" placeholder="*Adınız">
+                    </div>
+                    <div class="templatemo_form">
+                        <input id="LastName" name="LastName" type="text" class="form-control" placeholder="*Soyadınız">
+                    </div>
+                    <div class="templatemo_form">
+                        <input id="Username" name="Username" type="text" class="form-control" placeholder="*Kullanıcı Adınız">
+                    </div>
+                    <div class="templatemo_form">
+                        <input id="Password" name="Password" type="password" class="form-control" placeholder="*Şifreniz">
+                    </div>
+                    <div class="templatemo_form">
+                        <input id="Email" name="Email" type="email" class="form-control" placeholder="*E-Mailiniz">
+                    </div>
+                    <div class="templatemo_form">
+                        <input id="Phone" name="Phone" type="text" class="form-control" placeholder="Telefon Numaranız">
+                    </div>
+                    <div class="eBtnZemin">
+                        <div class="eBtnBody">
+                            <button type="submit" class="eBtn eBtnBack">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                Kayıt Ol
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div>
+                    @if (ViewContext.ViewBag.Message != null)
+                    {
+                        <div class="alert alert-danger" role="alert">
+                            @ViewContext.ViewBag.Message
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url: "LoadData",
+                success: function (response) {
+                    console.log(response)
+                    $("#FirstName").val(response.firstName)
+                    $("#LastName").val(response.lastName)
+                    $("#Username").val(response.userName)
+                    $("#Email").val(response.email)
+                    $("#Phone").val(response.phone)
+                }
+            })
+        })
+    </script>
+}
