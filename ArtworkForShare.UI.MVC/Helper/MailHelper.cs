@@ -21,7 +21,7 @@ namespace ArtworkForShare.UI.MVC.Helper
             SmtpClient client = new SmtpClient("smtp.office365.com", 587);
             client.EnableSsl = true;
             client.UseDefaultCredentials = true;
-            NetworkCredential network = new NetworkCredential("Guid34Coder@outlook.com", "Coder159");
+            NetworkCredential network = new NetworkCredential(".........com", "...");
             client.Credentials = network;
             try
             {
