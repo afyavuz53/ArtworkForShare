@@ -11,7 +11,7 @@ namespace ArtworkForShare.DAL.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("User ID=postgres; Password=159487; Server=localhost; Database=ArtworkForShareDb;");
+            optionsBuilder.UseNpgsql("User ID=postgres; Password=.......; Server=localhost; Database=ArtworkForShareDb;");
             base.OnConfiguring(optionsBuilder);
         }
         public DbSet<Artwork> Artworks { get; set; }
