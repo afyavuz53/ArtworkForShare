@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "/o/nIykWjW6pKu9jqeJwR3TdVN2xYBKikBKwyDKjDEWUbYHZ+1Eg+TNXD9DPzQdWYmEzMhrxYlRo1ZgZlTRDHA==",
+  "dgSpecHash": "czVSB78N+dPJ1cia4rkiKNSOSwB2oZ5/8R2OUIXkRaR3r7THj7NdYmYFuN6jF94vUAEytnHCRq97IrlDclD25g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ahmet Yavuz\\Desktop\\ProjeOdevi\\ArtworkForShare\\ArtworkForShare.UI.MVC\\ArtworkForShare.UI.MVC.csproj",
+  "projectFilePath": "C:\\Users\\Ahmet Yavuz\\Desktop\\GitHubRepository\\ArtworkForShare\\ArtworkForShare.UI.MVC\\ArtworkForShare.UI.MVC.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Ahmet Yavuz\\.nuget\\packages\\buildbundlerminifier\\3.2.449\\buildbundlerminifier.3.2.449.nupkg.sha512",
     "C:\\Users\\Ahmet Yavuz\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Ahmet Yavuz\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Ahmet Yavuz\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

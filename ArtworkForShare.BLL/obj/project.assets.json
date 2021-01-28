@@ -744,11 +744,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ahmet Yavuz\\Desktop\\ProjeOdevi\\ArtworkForShare\\ArtworkForShare.BLL\\ArtworkForShare.BLL.csproj",
+      "projectUniqueName": "C:\\Users\\Ahmet Yavuz\\Desktop\\GitHubRepository\\ArtworkForShare\\ArtworkForShare.BLL\\ArtworkForShare.BLL.csproj",
       "projectName": "ArtworkForShare.BLL",
-      "projectPath": "C:\\Users\\Ahmet Yavuz\\Desktop\\ProjeOdevi\\ArtworkForShare\\ArtworkForShare.BLL\\ArtworkForShare.BLL.csproj",
+      "projectPath": "C:\\Users\\Ahmet Yavuz\\Desktop\\GitHubRepository\\ArtworkForShare\\ArtworkForShare.BLL\\ArtworkForShare.BLL.csproj",
       "packagesPath": "C:\\Users\\Ahmet Yavuz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ahmet Yavuz\\Desktop\\ProjeOdevi\\ArtworkForShare\\ArtworkForShare.BLL\\obj\\",
+      "outputPath": "C:\\Users\\Ahmet Yavuz\\Desktop\\GitHubRepository\\ArtworkForShare\\ArtworkForShare.BLL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ahmet Yavuz\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -765,14 +765,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Ahmet Yavuz\\Desktop\\ProjeOdevi\\ArtworkForShare\\ArtworkForShare.Core\\ArtworkForShare.Core.csproj": {
-              "projectPath": "C:\\Users\\Ahmet Yavuz\\Desktop\\ProjeOdevi\\ArtworkForShare\\ArtworkForShare.Core\\ArtworkForShare.Core.csproj"
+            "C:\\Users\\Ahmet Yavuz\\Desktop\\GitHubRepository\\ArtworkForShare\\ArtworkForShare.Core\\ArtworkForShare.Core.csproj": {
+              "projectPath": "C:\\Users\\Ahmet Yavuz\\Desktop\\GitHubRepository\\ArtworkForShare\\ArtworkForShare.Core\\ArtworkForShare.Core.csproj"
             },
-            "C:\\Users\\Ahmet Yavuz\\Desktop\\ProjeOdevi\\ArtworkForShare\\ArtworkForShare.DAL\\ArtworkForShare.DAL.csproj": {
-              "projectPath": "C:\\Users\\Ahmet Yavuz\\Desktop\\ProjeOdevi\\ArtworkForShare\\ArtworkForShare.DAL\\ArtworkForShare.DAL.csproj"
+            "C:\\Users\\Ahmet Yavuz\\Desktop\\GitHubRepository\\ArtworkForShare\\ArtworkForShare.DAL\\ArtworkForShare.DAL.csproj": {
+              "projectPath": "C:\\Users\\Ahmet Yavuz\\Desktop\\GitHubRepository\\ArtworkForShare\\ArtworkForShare.DAL\\ArtworkForShare.DAL.csproj"
             },
-            "C:\\Users\\Ahmet Yavuz\\Desktop\\ProjeOdevi\\ArtworkForShare\\ArtworkForShare.Model\\ArtworkForShare.Model.csproj": {
-              "projectPath": "C:\\Users\\Ahmet Yavuz\\Desktop\\ProjeOdevi\\ArtworkForShare\\ArtworkForShare.Model\\ArtworkForShare.Model.csproj"
+            "C:\\Users\\Ahmet Yavuz\\Desktop\\GitHubRepository\\ArtworkForShare\\ArtworkForShare.Model\\ArtworkForShare.Model.csproj": {
+              "projectPath": "C:\\Users\\Ahmet Yavuz\\Desktop\\GitHubRepository\\ArtworkForShare\\ArtworkForShare.Model\\ArtworkForShare.Model.csproj"
             }
           }
         }

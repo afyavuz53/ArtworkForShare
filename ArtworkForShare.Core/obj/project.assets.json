@@ -533,11 +533,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ahmet Yavuz\\Desktop\\ProjeOdevi\\ArtworkForShare\\ArtworkForShare.Core\\ArtworkForShare.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Ahmet Yavuz\\Desktop\\GitHubRepository\\ArtworkForShare\\ArtworkForShare.Core\\ArtworkForShare.Core.csproj",
       "projectName": "ArtworkForShare.Core",
-      "projectPath": "C:\\Users\\Ahmet Yavuz\\Desktop\\ProjeOdevi\\ArtworkForShare\\ArtworkForShare.Core\\ArtworkForShare.Core.csproj",
+      "projectPath": "C:\\Users\\Ahmet Yavuz\\Desktop\\GitHubRepository\\ArtworkForShare\\ArtworkForShare.Core\\ArtworkForShare.Core.csproj",
       "packagesPath": "C:\\Users\\Ahmet Yavuz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ahmet Yavuz\\Desktop\\ProjeOdevi\\ArtworkForShare\\ArtworkForShare.Core\\obj\\",
+      "outputPath": "C:\\Users\\Ahmet Yavuz\\Desktop\\GitHubRepository\\ArtworkForShare\\ArtworkForShare.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ahmet Yavuz\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,0 +1,45 @@
+[
+
+  {
+
+    "outputFileName": "wwwroot/css/css.min.css",
+
+    "inputFiles": [
+
+      "wwwroot/css/bootstrap.min.css",
+      "wwwroot/css/font-awesome.min.css",
+      "wwwroot/css/templatemo_misc.css",
+      "wwwroot/css/templatemo_style.css",
+      "wwwroot/css/fontStyle.css",
+      "wwwroot/css/myStyle.css"
+
+    ]
+
+  },
+
+  {
+
+    "outputFileName": "wwwroot/js/js.min.js",
+
+    "inputFiles": [
+
+      "wwwroot/js/jquery-1.10.2.min.js",
+
+      "wwwroot/js/jquery.lightbox.js",
+      "wwwroot/js/templatemo_custom.js"
+
+    ],
+
+    "minify": {
+
+      "enabled": true,
+
+      "renameLocals": true
+
+    },
+
+    "sourceMap": false
+
+  }
+
+]

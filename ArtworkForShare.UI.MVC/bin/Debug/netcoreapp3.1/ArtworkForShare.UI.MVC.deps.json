@@ -25,6 +25,7 @@
       "ArtworkForShare.UI.MVC/1.0.0": {
         "dependencies": {
           "ArtworkForShare.BLL": "1.0.0",
+          "BuildBundlerMinifier": "3.2.449",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.1",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.4",
           "System.Drawing.Common": "5.0.0",
@@ -306,6 +307,7 @@
           "ArtworkForShare.UI.MVC.dll": {}
         }
       },
+      "BuildBundlerMinifier/3.2.449": {},
       "Humanizer.Core/2.8.26": {
         "runtime": {
           "lib/netstandard2.0/Humanizer.dll": {
@@ -3497,6 +3499,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "BuildBundlerMinifier/3.2.449": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uA9sYDy4VepL3xwzBTLcP2LyuVYMt0ZIT3gaSiXvGoX15Ob+rOP+hGydhevlSVd+rFo+Y+VQFEHDuWU8HBW+XA==",
+      "path": "buildbundlerminifier/3.2.449",
+      "hashPath": "buildbundlerminifier.3.2.449.nupkg.sha512"
     },
     "Humanizer.Core/2.8.26": {
       "type": "package",

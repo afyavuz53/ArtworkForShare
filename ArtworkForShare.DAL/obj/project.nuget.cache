@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xSpm+A+3vyvRM4VuJLn4ZIuLbKAf3ERBWm0y7Q4+9x1Xs5XDLgd7yq3tbomh9uj2bJNyTldc9dOLIPWCdHXUWg==",
+  "dgSpecHash": "B1oz+iSsavRw4Z7u137thhHez10BxzfOIX+gF0Eqm5A0Uki07VKqapNMa+7EhbbvUFq8l2PuOQfulHj1cIk8jw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ahmet Yavuz\\Desktop\\ProjeOdevi\\ArtworkForShare\\ArtworkForShare.DAL\\ArtworkForShare.DAL.csproj",
+  "projectFilePath": "C:\\Users\\Ahmet Yavuz\\Desktop\\GitHubRepository\\ArtworkForShare\\ArtworkForShare.DAL\\ArtworkForShare.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ahmet Yavuz\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Ahmet Yavuz\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

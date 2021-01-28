@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZHUApchjodMUMh/6gG0MupMDLPyJy5xTyonIP2MCyv+ieC3pwsjMUDhwGf8cvpj79MiG6d5Pem0zsD32VLqH5A==",
+  "dgSpecHash": "0MNFfur2l298D+Idy89Bfd//E0emISYxykpWsy3xCrsPfHwQE0HgBu3AzMdPiYCQdNtHidocdXJF4lANamRQgg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ahmet Yavuz\\Desktop\\ProjeOdevi\\ArtworkForShare\\ArtworkForShare.Model\\ArtworkForShare.Model.csproj",
+  "projectFilePath": "C:\\Users\\Ahmet Yavuz\\Desktop\\GitHubRepository\\ArtworkForShare\\ArtworkForShare.Model\\ArtworkForShare.Model.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ahmet Yavuz\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.1\\microsoft.entityframeworkcore.5.0.1.nupkg.sha512",
     "C:\\Users\\Ahmet Yavuz\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.1\\microsoft.entityframeworkcore.abstractions.5.0.1.nupkg.sha512",
